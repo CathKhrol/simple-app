@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "server1",
+      name: "simple-app",
       script: "./index.js",
       watch: true,
     },
