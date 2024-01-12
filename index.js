@@ -4,7 +4,6 @@ const appRouter = require("./app/routes/index.js");
 const knex = require("./knex/db.js");
 const { Model } = require("objection");
 const fileUpload = require("express-fileupload");
-const formidable = require("express-formidable");
 
 Model.knex(knex);
 const app = express();
@@ -12,7 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
-//app.use(formidable());
 app.use(appRouter);
 
 const PORT = process.env.PORT;
